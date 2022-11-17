@@ -5,4 +5,4 @@ To access mods, hover over the Mods/addons panel and select a mod.
 
 I will hopefully update this soon and make it better with more mods and forums.
 
-The current version is 2.o48! Keep this in mind when dealing with mods, as some might not function on this version! (For clarity, I didn't put any mods that are incompatable with the current version)
+The current version is 2.048! Keep this in mind when dealing with mods, as some might not function on this version! (For clarity, I didn't put any mods that are incompatable with the current version)
