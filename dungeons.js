@@ -161,6 +161,15 @@ var LaunchDungeons=function()
 	new Game.Monster('Ascended Baking Pod','ascendedBakingPod',[1,3],0,{hp:60,might:12,guard:14,speed:4,dodge:0,rarity:0.7},bossLoot);//boss
 	Game.Monsters['Ascended Baking Pod'].onKill=function(){Game.Win('Now this is pod-smashing');};Game.Monsters['Ascended Baking Pod'].AI='static';Game.Monsters['Ascended Baking Pod'].boss=1;Game.Monsters['Ascended Baking Pod'].quotes={fight:'rrrrrrrise.',defeat:'blrglblg.'};
 	
+	//portal ponsters
+	new Game.Monster('Phantom','phantom',[0,1],1,{hp:25,might:5,guard:10,speed:5,dodge:1,rarity:1},basicLoot);
+	new Game.Monster('Demon','demon',[2,2],1,{hp:40,might:6,guard:8,speed:7,dodge:2,rarity:0.8},goodLoot);
+	new Game.Monster('Zombie','zombie',[1,2],2,{hp:10,might:4,guard:5,speed:6,dodge:0,rarity:1},basicLoot);
+	
+	new Game.Monster('Demigorgon','demigorgon',[1,3],0,{hp:100,might:5,guard:5,speed:5,dodge:2,rarity:1},bossLoot);
+	Game.Monsters['Demigorgon'].onKill=function(){Game.Win('Goodbye Mike');};Game.Monsters['Demigorgon'].AI='static';Game.Monsters['Demigorgon'].boss=1;Game.Monsters['Demigorgon'].quotes={fight:'Roar....',defeat:'SQUEALLLLLLL'};
+	new Game.Monster('Phantom King','phantomking',[1,3],3,{hp:150,might:6,guard:3,speed:2,dodge:0,rarity:0.8},bossLoot);
+	Game.Monsters['Phantom King'].onKill=function(){Game.Win('Slayer of Evil');};Game.Monsters['Phantom King'].AI='static';Game.Monsters['Phantom King'].boss=1;Game.Monsters['Phantom King'].quotes={fight:'You shall be consumed...',defeat:'I shall return stronger...'}
 	
 	Game.BossMonsters=[];
 	for (var i in Game.Monsters)
@@ -687,7 +696,7 @@ var LaunchDungeons=function()
 			}
 			
 			//place relics
-			/*
+			
 			var tile=this.map.getBestSpotInRoom(this.map.getRoom(this.map.exit[0],this.map.exit[1]));
 			var entity=this.AddEntity('special','upgrade',tile.x,tile.y);
 			entity.value='Dungeon cookie upgrade';
@@ -702,7 +711,7 @@ var LaunchDungeons=function()
 					entity.value='Dungeon cookie upgrade';
 					this.map.removeFreeTile(tile.x,tile.y);
 				}
-			}*/
+			}
 			
 			//sprinkle monsters and treasure
 			for (var i=0;i<Math.ceil(this.map.freeTiles.length*0.7);i++)//let's fill this up with A LOT of stuff
