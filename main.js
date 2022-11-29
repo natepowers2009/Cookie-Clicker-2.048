@@ -8753,7 +8753,7 @@ Game.Launch=function()
 			Game.UnlockTiered(this);
 			if (this.amount>=Game.SpecialGrandmaUnlock && Game.Objects['Grandma'].amount>0) Game.Unlock(this.grandma.name);
 		});
-		//Game.last.minigameUrl='minigameDungeon.js';//not yet
+		 Game.last.minigameUrl='minigameDungeon.js';
 		Game.last.minigameName=loc("Dungeon");
 		
 		new Game.Object('Bank','bank|banks|banked|Interest rates [X]% better|Interest rates [X]% better','Generates cookies from interest.',6,15,{base:'bank',xV:8,yV:4,w:56,rows:1,x:0,y:13},0,function(me){
@@ -8864,6 +8864,9 @@ Game.Launch=function()
 		},function(){
 			Game.UnlockTiered(this);
 			if (this.amount>=Game.SpecialGrandmaUnlock && Game.Objects['Grandma'].amount>0) Game.Unlock(this.grandma.name);
+			 Game.last.minigameUrl='minigameCasino.js';
+		Game.last.minigameName=loc("Casino");
+		
 		});
 		Game.last.displayName='<span style="font-size:85%;letter-spacing:-1px;position:relative;bottom:2px;">Chancemaker</span>';//shrink
 		
