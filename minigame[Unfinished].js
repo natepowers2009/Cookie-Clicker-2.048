@@ -77,13 +77,15 @@ if (Game.Has('Titanium Support Beams')) {
   var MaxMinetime = 1200
 }else if (Game.Has('Stainless Steel Support Beams')) {
   var MaxMinetime = 900
-}else if (Game.Has('Iron Support Beams') {
+}else if (Game.Has('Iron Support Beams')) {
   var MaxMineTime = 600
 }else{
   var MaxMinetime = 300  
 };
 
-
+if (Game.Has('Netherite Pickaxes')) {
+ var PickaxeSpeed =  
+}
           
 /*=================================================
   Achievements
@@ -97,7 +99,7 @@ new Cppkies.Achievement(
 
 new Cppkies.Achievement(
   "That thing you do when you want people to hate you"
-  "Mine diamonds with a wooden pickaxe.<q>You are the scum of the earth.</q>"
+  "Mine diamonds with a wooden pickaxe.<q>How could you?!</q>"
   [1,7]
 )
 
