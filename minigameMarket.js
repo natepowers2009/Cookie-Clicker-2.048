@@ -410,7 +410,7 @@ M.launch=function()
 		'.bankButton{cursor:pointer;opacity:0.8;color:#94cd50;font-weight:bold;font-size:10px;border:1px solid #999;border-color:#94cd50 #1b7a2f #1b7a2f #94cd50;padding:2px 6px;margin:0px 1px 1px 0px;display:inline-block;}'+
 		'.bankButtonBuy{color:#a358ff;border-color:#a358ff #3a52bc #3a52bc #a358ff;}'+
 		'.bankButtonSell{color:#94cd50;border-color:#94cd50 #1b7a2f #1b7a2f #94cd50;}'+
-		//'.bankButtonLess{color:#e25142;border-color:#e25142 #9a1225 #9a1225 #e25142;}'+
+		'.bankButtonLess{color:#e25142;border-color:#e25142 #9a1225 #9a1225 #e25142;}'+
 		'.bankButton:hover{opacity:1;}'+
 		'.bankButton:active{color:#fff;}'+
 		'.bankButtonOff{color:#999;border-color:#999 #666 #666 #999;opacity:0.6;}'+
@@ -438,7 +438,7 @@ M.launch=function()
 					'<div id="bankOffice" style="display:inline-block;padding:0px 4px;" '+Game.getDynamicTooltip('Game.ObjectsById['+M.parent.id+'].minigame.officeTooltip()','this')+'><div id="bankOfficeIcon" class="icon" style="pointer-events:none;display:inline-block;transform:scale(0.5);margin:-16px -18px -12px -14px;vertical-align:middle;background-position:'+(-0*48)+'px '+(-33*48)+'px;"></div><span id="bankOfficeName" class="bankSymbol" style="width:128px;"></span><div class="bankButton bankButtonBuy bankButtonOff" id="bankOfficeUpgrade">-</div></div>'+
 					'<div id="bankBrokers" style="display:inline-block;padding:0px 4px;" '+Game.getDynamicTooltip('Game.ObjectsById['+M.parent.id+'].minigame.brokersTooltip()','this')+'><div id="bankBrokersIcon" class="icon" style="pointer-events:none;display:inline-block;transform:scale(0.5);margin:-16px -18px -12px -14px;vertical-align:middle;background-position:'+(-1*48)+'px '+(-33*48)+'px;"></div><span id="bankBrokersText" class="bankSymbol" style="width:96px;">no brokers</span><div class="bankButton bankButtonBuy bankButtonOff" id="bankBrokersBuy">Hire</div></div>'+
 					'<div style="display:inline-block;padding:0px 4px;"><div id="bankLoan1" style="display:none;" class="bankButton bankButtonSell bankButtonOff" '+Game.getDynamicTooltip('Game.ObjectsById['+M.parent.id+'].minigame.loanTooltip(1)','this')+'>1st loan</div><div id="bankLoan2" style="display:none;" class="bankButton bankButtonSell bankButtonOff" '+Game.getDynamicTooltip('Game.ObjectsById['+M.parent.id+'].minigame.loanTooltip(2)','this')+'>2nd loan</div><div id="bankLoan3" style="display:none;" class="bankButton bankButtonSell bankButtonOff" '+Game.getDynamicTooltip('Game.ObjectsById['+M.parent.id+'].minigame.loanTooltip(3)','this')+'>3rd loan</div></div>'+
-					/*'<div style="display:inline-block;padding:0px 4px;"><div id="bankOpp" class="bankButton bankButtonBuy bankButtonOff" '+Game.getDynamicTooltip('Game.ObjectsById['+M.parent.id+'].minigame.oppTooltip()','this')+'>Generate opportunity</div> <div class="bankSymbol" style="position:relative;font-size:10px;color:rgba(255,255,255,0.6);padding-left:16px;"><div '+Game.getDynamicTooltip('Game.ObjectsById['+M.parent.id+'].minigame.refillTooltip','this')+' id="bankLumpRefill" class="usesIcon shadowFilter lumpRefill" style="left:-18px;top:-18px;background-position:'+(-29*48)+'px '+(-14*48)+'px;"></div>refresh</div></div>'+*/
+					'<div style="display:inline-block;padding:0px 4px;"><div id="bankOpp" class="bankButton bankButtonBuy bankButtonOff" '+Game.getDynamicTooltip('Game.ObjectsById['+M.parent.id+'].minigame.oppTooltip()','this')+'>Generate opportunity</div> <div class="bankSymbol" style="position:relative;font-size:10px;color:rgba(255,255,255,0.6);padding-left:16px;"><div '+Game.getDynamicTooltip('Game.ObjectsById['+M.parent.id+'].minigame.refillTooltip','this')+' id="bankLumpRefill" class="usesIcon shadowFilter lumpRefill" style="left:-18px;top:-18px;background-position:'+(-29*48)+'px '+(-14*48)+'px;"></div>refresh</div></div>'+
 				'</div>';
 			
 			for (var i=0;i<M.goodsById.length;i++)
@@ -813,20 +813,20 @@ M.launch=function()
 			if (me.val>(100+(Game.Objects['Bank'].level-1)*3) && me.d>0) me.d*=0.9;
 			
 			me.val+=me.d;
-			/*if (me.val<=0 && me.d<0)
+			if (me.val<=0 && me.d<0)
 			{
 				me.d*=0.75;
 				if (me.mode==4 && Math.random()<0.05) me.mode=2;
 			}
 			if (me.val<2) me.val+=(2-me.val)*0.1;
 			me.val=Math.max(me.val,0.01);*/
-			/*var cutoff=5;
+			var cutoff=5;
 			var minvalue=1;
 			if (me.val<=cutoff)
 			{
 				var s=Math.max(0,me.val)/cutoff;
 				me.val=((2*minvalue-cutoff)*s+(2*cutoff-3*minvalue))*s*s+minvalue;//low soft-cap between 1 and 5
-			}*/
+			}
 			if (me.val<5) me.val+=(5-me.val)*0.5;
 			if (me.val<5 && me.d<0) me.d*=0.95;
 			me.val=Math.max(me.val,1);
