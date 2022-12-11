@@ -12,3 +12,7 @@ The current version is 2.048! Keep this in mind when dealing with mods, as some 
 NOTE: I DO NOT OWN ANY OF THIS CODE. I SIMPLY WENT OVER AND EDITED CERTAIN THINGS TO MAKE IT MORE PRACTICAL. 
 
 ALL credits go to Sushi8756 (For the posting of the source code and the environment I pulled it from) and Orteil (For the original code).
+
+Hotfix 1.1:
+
+I was having issues with a javascript error, had to reroll the file to its original state which cause a lot of data loss. I apolagize heavily for the inconvenience.
