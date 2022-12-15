@@ -5,6 +5,7 @@ if (typeof Experimentals==='undefined') {
   Game.LoadMod('https://klattmose.github.io/CookieClicker/minigameCasino.js?v=3.16');
   Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE-POCs/HurricaneSugar.js?v=1.7');
   Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE-POCs/BlackholeInverter.js?v=1.12');
+  Game.LoadMod('https://klattmose.github.io/CookieClicker/KlattmoseUtilities.js?v=2.16');
   console.log('WARNING: THESE MODS ARE PURELY EXPERIMENTAL! ENABLE AT YOUR OWN RISK!');
 }else{
   console.log('You already have experimental addons enabled!');
