@@ -18,3 +18,12 @@ ________________________________________________________________________________
 Hotfix 1.1:
 
 I was having issues with a javascript error, had to reroll the file to its original state which cause a lot of data loss. I apolagize heavily for the inconvenience.
+
+___________________________________________________________________________________________________________________________________________________
+
+Hotfix 1.2:
+
+Added experimental mods. These are purely for testing purposes and will most likely not be added as an actual part of the mods/addons dropdown.
+WARNING: DO NOT ENABLE THESE FEATURES IF YOU HAVE ANY OTHER MODS ENABLED. THIS WILL CAUSE FILE CORRUPTION BEYOND MY REPAIRING CAPABILITIES.
+
+___________________________________________________________________________________________________________________________________________________
